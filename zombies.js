@@ -1,3 +1,4 @@
+// jshint esversion: 6
 /**
  * Class => Item(name)
  * -----------------------------
@@ -8,6 +9,11 @@
  * @property {string} name
  */
 
+class Item {
+  constructor(name) {
+    this.name = name;
+  }
+}
 
 /**
  * Class => Weapon(name, damage)
@@ -25,11 +31,20 @@
  * @property {number} damage
  */
 
+class Weapon extends Item {
+  constructor(name, damage) {
+    super(name);
+    this.damage = damage;
+  }
+}
+
+
 
 /**
  * Weapon Extends Item Class
  * -----------------------------
  */
+
 
 
 
@@ -54,6 +69,13 @@
  * Food Extends Item Class
  * -----------------------------
  */
+
+ class Food extends Item {
+  constructor(name, energy) {
+    super(name);
+    this.energy = energy;
+  }
+ }
 
 
 
