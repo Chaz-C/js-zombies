@@ -229,7 +229,7 @@ discardItem(item) {
 
 equip(itemToEquip) {
   if ( itemToEquip instanceof Weapon && this._pack.indexOf(itemToEquip) > -1 ) {
-    if (this.equipped) {
+    if (this.equipped !== false) {
       var arr1 = this._pack.splice(this._pack.indexOf(itemToEquip), 1, this.equipped);
       this.equipped = arr1[0];
     } else {
@@ -306,7 +306,7 @@ useItem(item) {
  */
 
  equippedWith () {
-  if ( this.equipped) {
+  if ( this.equipped !== false) {
     return this.equipped.name;
   } else {
     return false;
