@@ -135,6 +135,10 @@ class Weapon extends Item {
     return this._maxHealth;
   }
 
+  checkPack() {
+    console.log(this._pack);
+  }
+
 
 /**
  * Player Class Method => takeItem(item)
@@ -223,6 +227,17 @@ discardItem(item) {
  * @param {Weapon} itemToEquip  The weapon item to equip.
  */
 
+equip(itemToEquip) {
+  if ( itemToEquip instanceof Weapon && this._pack.indexOf(itemToEquip) > -1 ) {
+    if (this.equipped !== false ) {
+      var arr1 = this._pack.splice(this._pack.indexOf(itemToEquip), 1, this.equipped);
+      this.equipped = arr1[0];
+    } else {
+      var arr2 = this._pack.splice(this._pack.indexOf(itemToEquip), 1);
+      this.equipped = arr2[0];
+    }
+  }
+}
 
 /**
  * Player Class Method => eat(itemToEat)
