@@ -258,6 +258,16 @@ equip(itemToEquip) {
  * @param {Food} itemToEat  The food item to eat.
  */
 
+ eat(itemToEat) {
+  if ( itemToEat instanceof Food && this._pack.indexOf(itemToEat) > -1 ) {
+    var eatThis = this._pack.splice(this._pack.indexOf(itemToEat), 1);
+    this.health += eatThis[0].energy;
+    if ( this.health > this.getMaxHealth() ) {
+      this.health = this.getMaxHealth();
+    }
+  }
+ }
+
 
 /**
  * Player Class Method => useItem(item)
@@ -272,6 +282,9 @@ equip(itemToEquip) {
  * @param {Item/Weapon/Food} item   The item to use.
  */
 
+useItem(item) {
+
+}
 
 /**
  * Player Class Method => equippedWith()
