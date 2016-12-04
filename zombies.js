@@ -331,6 +331,16 @@ useItem(item) {
  * @property {boolean} isAlive      Default value should be `true`.
  */
 
+ class Zombie {
+  constructor(health, strength, speed) {
+    this.health = health;
+    this.strength = strength;
+    this.speed = speed;
+    this._maxHealth = health;
+    this.isAlive = true;
+  }
+ }
+
 
 /**
  * Class => FastZombie(health, strength, speed)
