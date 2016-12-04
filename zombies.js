@@ -283,7 +283,12 @@ equip(itemToEquip) {
  */
 
 useItem(item) {
-
+  if ( item instanceof Weapon ) {
+    this.equip(item);
+  }
+  if ( item instanceof Food ) {
+    this.eat(item);
+  }
 }
 
 /**
@@ -300,7 +305,15 @@ useItem(item) {
  * @return {string/boolean}   Weapon name or false if nothing is equipped.
  */
 
+ equippedWith () {
+  if ( this.equipped !== false ) {
+    return this.name, this.equipped.name;
+  } else {
+    return false;
+  }
  }
+
+}
 
 /**
  * Class => Zombie(health, strength, speed)
