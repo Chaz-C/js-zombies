@@ -101,6 +101,19 @@ class Weapon extends Item {
  * @property {method} getMaxHealth         Returns private variable `maxHealth`.
  */
 
+ class Player {
+
+  constructor(name, health, strength, speed) {
+    this.name = name;
+    this.health = health;
+    this.strength = strength;
+    this.speed = speed;
+    this.isAlive = true;
+    this.equipped = false;
+    this._pack = [];
+    this._maxHealth = health;
+  }
+
 
 /**
  * Player Class Method => checkPack()
@@ -113,6 +126,14 @@ class Weapon extends Item {
  *
  * @name checkPack
  */
+
+  getPack() {
+    return this._pack;
+  }
+
+  getMaxHealth() {
+    return this._maxHealth;
+  }
 
 
 /**
@@ -132,6 +153,17 @@ class Weapon extends Item {
  * @param {Item/Weapon/Food} item   The item to take.
  * @return {boolean} true/false     Whether player was able to store item in pack.
  */
+
+ takeItem(item) {
+  if ( this._pack.length >= 3 ) {
+    console.log('Pack is full');
+    return false;
+  } else {
+    this._pack.push(item);
+    console.log(this.name, this._pack);
+    return true;
+  }
+ }
 
 
 /**
@@ -160,6 +192,16 @@ class Weapon extends Item {
  * @return {boolean} true/false     Whether player was able to remove item from pack.
  */
 
+discardItem(item) {
+  if ( this._pack.indexOf(item) === -1 ) {
+    console.log('Could not remove', item);
+    return false;
+  } else {
+    this._pack.splice(this._pack.indexOf(item), 1);
+    console.log(this.name, this._pack, item, 'removed');
+    return true;
+  }
+}
 
 /**
  * Player Class Method => equip(itemToEquip)
@@ -230,6 +272,7 @@ class Weapon extends Item {
  * @return {string/boolean}   Weapon name or false if nothing is equipped.
  */
 
+ }
 
 /**
  * Class => Zombie(health, strength, speed)
