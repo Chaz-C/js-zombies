@@ -65,7 +65,7 @@ describe('Player', () => {
 
   let player;
   beforeEach(() => {
-    player = new Zombies.player(10, 150, 50, 20);
+    player = new Zombies.player('Bob', 150, 50, 20);
   });
 
   it('should be a class', () => {
