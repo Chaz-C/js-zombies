@@ -40,10 +40,11 @@
  */
 
  class Weapon /*extends Item*/ {
-  /*constructor(name, damage) {
-    super(name);
-    this.damage = damage;
-  }*/
+  constructor(name, damage) {
+    this.name = name;
+    // super(name);
+    // this.damage = damage;
+  }
  }
 
 
