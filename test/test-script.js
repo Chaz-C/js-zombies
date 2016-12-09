@@ -8,10 +8,10 @@ const Zombies = require('../zombies.js');
 
 describe('Item', () => {
 
-  /*let item;
+  let item;
   beforeEach(() => {
     item = new Zombies.item('Club');
-  });*/
+  });
 
   it('should be a class', () => {
     item.should.be.a.function;
