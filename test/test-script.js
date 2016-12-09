@@ -18,3 +18,13 @@ describe('Item', () => {
   });
 
 });
+
+describe('Weapon', () => {
+
+  let weapon;
+
+  it('should be a class', () => {
+    weapon.should.be.a.function;
+  });
+
+});
