@@ -75,6 +75,11 @@ describe('Player', () => {
     player.should.have.a.property('name');
     player.name.should.be.a('string');
   });
+  it('should have a health property that is a number', () => {
+    player.should.have.a.property('health');
+    player.health.should.be.a('number');
+  });
+
 
 
 });
