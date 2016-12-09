@@ -70,7 +70,7 @@
  * -----------------------------
  */
 
-class Food {
+class Food extends Item {
 
 }
 
@@ -110,6 +110,11 @@ class Food {
  * @name checkPack
  */
 
+module.exports = {
+  item: Item,
+  weapon: Weapon,
+  food: Food
+};
 
 /**
  * Player Class Method => takeItem(item)
@@ -378,9 +383,3 @@ function runGame() {
   // player.checkPack();
 }
 
-
-module.exports = {
-  item: Item,
-  weapon: Weapon,
-  food: Food
-};
