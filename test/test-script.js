@@ -19,13 +19,14 @@ describe('Item', () => {
   it('should have a name', () => {
     item.name.should.equal('Club');
   });
-
 });
 
 describe('Weapon', () => {
 
   let weapon;
-  weapon = new Zombies.weapon('Club', 50);
+  beforeEach(() => {
+    weapon = new Zombies.weapon('Club', 50);
+  });
 
   it('should be a class', () => {
     weapon.should.be.a.function;
@@ -39,7 +40,16 @@ describe('Weapon', () => {
   it('should extend to the Item class', () => {
     weapon.should.be.an.instanceof(Zombies.item);
   });
+});
 
+describe('Food', () => {
 
+  let food;
+  beforeEach(() => {
+    food = new Zombies.food('Twix', 10);
+  });
 
+  it('should be a class', () => {
+    food.should.be.a.function;
+  });
 });
