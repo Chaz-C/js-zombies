@@ -59,3 +59,18 @@ describe('Food', () => {
     food.should.have.a.property('energy');
   });
 });
+
+
+describe('Player', () => {
+
+  let player;
+  beforeEach(() => {
+    player = new Zombies.player('bob', 150, 50, 20);
+  });
+
+  it('should be a class', () => {
+    player.should.be.a.function;
+  });
+
+
+});

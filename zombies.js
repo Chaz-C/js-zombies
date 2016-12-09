@@ -116,7 +116,8 @@ class Food extends Item {
 module.exports = {
   item: Item,
   weapon: Weapon,
-  food: Food
+  food: Food,
+  player: Player
 };
 
 /**
