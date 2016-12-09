@@ -83,6 +83,10 @@ describe('Player', () => {
     player.should.have.a.property('strength');
     player.strength.should.be.a('number');
   });
+  it('should have a speed property that is a number', () => {
+    player.should.have.a.property('speed');
+    player.speed.should.be.a('number');
+  });
 
 
 });
