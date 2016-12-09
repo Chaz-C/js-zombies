@@ -101,8 +101,9 @@ class Food extends Item {
  */
 
  class Player {
-  constructor(name) {
+  constructor(name, health) {
     this.name = name;
+    this.health = health;
   }
  }
 
