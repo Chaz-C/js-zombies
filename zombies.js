@@ -39,10 +39,9 @@
  * -----------------------------
  */
 
- class Weapon /*extends Item*/ {
+ class Weapon extends Item {
   constructor(name, damage) {
-    this.name = name;
-    // super(name);
+    super(name);
     this.damage = damage;
   }
  }
