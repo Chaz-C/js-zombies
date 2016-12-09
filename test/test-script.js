@@ -65,11 +65,15 @@ describe('Player', () => {
 
   let player;
   beforeEach(() => {
-    player = new Zombies.player('bob', 150, 50, 20);
+    player = new Zombies.player(10, 150, 50, 20);
   });
 
   it('should be a class', () => {
     player.should.be.a.function;
+  });
+  it('should have a name property that is a string', () => {
+    player.should.have.a.property('name');
+    player.name.should.be.a('string');
   });
 
 
