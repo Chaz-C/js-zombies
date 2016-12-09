@@ -1,3 +1,4 @@
+// jshint esversion: 6
 /**
  * Class => Item(name)
  * -----------------------------
@@ -8,6 +9,14 @@
  * @property {string} name
  */
 
+ class Item {
+  constructor(name) {
+    this.name = name;
+  }
+ }
+
+ console.log(Item);
+
 
 /**
  * Class => Weapon(name, damage)
@@ -15,7 +24,7 @@
  * Creates a weapon item.
  * Weapon items can be equipped for use in battle.
  *
- * The Weapon class constructor will call 
+ * The Weapon class constructor will call
  *   the super class (Item) constructor
  *   while passing in the 1 Item constructor param
  *
@@ -39,7 +48,7 @@
  * Creates a food item.
  * Food items give energy, restoring health to the player.
  *
- * The Food class constructor will call 
+ * The Food class constructor will call
  *   the super class (Item) constructor
  *   while passing in the 1 Item constructor param
  *
@@ -231,7 +240,7 @@
  * -----------------------------
  * Creates a fast zombie.
  *
- * The FastZombie class constructor will call 
+ * The FastZombie class constructor will call
  *   the super class (Zombie) constructor
  *   while passing in the 3 Zombie constructor params
  *
@@ -254,7 +263,7 @@
  * -----------------------------
  * Creates a strong zombie.
  *
- * The StrongZombie class constructor will call 
+ * The StrongZombie class constructor will call
  *   the super class (Zombie) constructor
  *   while passing in the 3 Zombie constructor params
  *
@@ -277,7 +286,7 @@
  * -----------------------------
  * Creates a ranged zombie.
  *
- * The RangedZombie class constructor will call 
+ * The RangedZombie class constructor will call
  *   the super class (Zombie) constructor
  *   while passing in the 3 Zombie constructor params
  *
@@ -300,7 +309,7 @@
  * -----------------------------
  * Creates an exploding zombie.
  *
- * The ExplodingZombie class constructor will call 
+ * The ExplodingZombie class constructor will call
  *   the super class (Zombie) constructor
  *   while passing in the 3 Zombie constructor params
  *
@@ -359,3 +368,8 @@ function runGame() {
   // console.log("After health: " + player.health);
   // player.checkPack();
 }
+
+
+module.exports = {
+  item: Item
+};
