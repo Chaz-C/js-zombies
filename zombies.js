@@ -100,6 +100,10 @@ class Food extends Item {
  * @property {method} getMaxHealth         Returns private variable `maxHealth`.
  */
 
+ class Player {
+
+ }
+
 
 /**
  * Player Class Method => checkPack()
