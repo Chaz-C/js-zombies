@@ -43,7 +43,7 @@
   constructor(name, damage) {
     this.name = name;
     // super(name);
-    // this.damage = damage;
+    this.damage = damage;
   }
  }
 
