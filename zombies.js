@@ -39,6 +39,13 @@
  * -----------------------------
  */
 
+ class Weapon /*extends Item*/ {
+  /*constructor(name, damage) {
+    super(name);
+    this.damage = damage;
+  }*/
+ }
+
 
 
 /**
@@ -370,5 +377,6 @@ function runGame() {
 
 
 module.exports = {
-  item: Item
+  item: Item,
+  weapon: Weapon
 };
