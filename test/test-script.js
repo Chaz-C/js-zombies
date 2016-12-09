@@ -52,4 +52,7 @@ describe('Food', () => {
   it('should be a class', () => {
     food.should.be.a.function;
   });
+  it('should extend to Item class', () => {
+    food.should.be.an.instanceof(Zombies.item);
+  });
 });
