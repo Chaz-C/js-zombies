@@ -55,4 +55,7 @@ describe('Food', () => {
   it('should extend to Item class', () => {
     food.should.be.an.instanceof(Zombies.item);
   });
+  it('should have property "energy"', () => {
+    food.should.have.a.property('energy');
+  });
 });
